@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "api-sports-io-nfl"
+version = "0.0.1"
+description = "API Wrapper for api-sports.io's NFL feeds."
+authors = ["Ian Pittwood <pittwoodian@gmail.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
