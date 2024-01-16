@@ -12,6 +12,15 @@ class TestEndpoints(unittest.TestCase):
         self.api = ApiNfl(api_key)
 
 
+class TestStatus(TestEndpoints):
+    def test_status(self):
+        resp = self.api.status()
+        self.assertIsInstance(resp, dict)
+        self.assertIn("account", resp)
+        self.assertIn("subscription", resp)
+        self.assertIn("requests", resp)
+
+
 class TestTimezone(TestEndpoints):
     def test_timezone(self):
         resp = self.api.timezone()

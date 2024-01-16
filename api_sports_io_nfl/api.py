@@ -9,6 +9,7 @@ from api_sports_io_nfl import exceptions
 
 class ApiNfl:
     ENDPOINTS = {
+        "status": "/status",
         "timezone": "/timezone",
         "seasons": "/seasons",
         "leagues": "/leagues",
@@ -109,6 +110,12 @@ class ApiNfl:
         if resp.json().get("errors"):
             raise exceptions.ApiError(response=resp)
         return resp
+
+    def status(self):
+        """Call the status endpoint."""
+        url = urljoin(self.protocol + self.api_host, self.ENDPOINTS["status"])
+        resp = self.get(url)
+        return resp.json()["response"]
 
     def timezone(self):
         """Call the timezone endpoint.
