@@ -1,10 +1,25 @@
 [tool.poetry]
 name = "api-sports-io-nfl"
-version = "0.0.1"
+version = "0.0.2"
 description = "API Wrapper for api-sports.io's NFL feeds."
 authors = ["Ian Pittwood <pittwoodian@gmail.com>"]
+maintainers = ["Ian Pittwood <pittwoodian@gmail.com>"]
+repository = "https://github.com/ianpittwood/api-sports-io-nfl"
 license = "Apache 2.0"
 readme = "README.md"
+keywords = ["api", "sports", "nfl", "api-sports.io", "football", "american football", "gridiron"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
